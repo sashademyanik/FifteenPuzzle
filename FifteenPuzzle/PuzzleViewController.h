@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface PuzzleViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIView *boardView;
 
 @end
