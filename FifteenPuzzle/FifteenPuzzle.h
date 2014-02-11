@@ -19,6 +19,6 @@
 -(BOOL)canSlideTileDownAtRow:(int)row Column:(int)col;
 -(BOOL)canSlideTileLeftAtRow:(int)row Column:(int)col;
 -(BOOL)canSlideTileRightAtRow:(int)row Column:(int)col;
-
+-(void)slideTileAtRow:(int)row Column:(int)col;
 
 @end

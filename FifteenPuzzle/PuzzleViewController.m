@@ -19,8 +19,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.board = [[FifteenPuzzle alloc] init];
-    [self.board scramble: NUM_SHUFFLES];
-    [self arrangeBoardView];
+    //[self.board scramble: NUM_SHUFFLES];
+    //[self arrangeBoardView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,6 +32,12 @@
 -(IBAction)tileSelected:(UIButton*)sender{
     const int tag = [sender tag];
     NSLog(@"tileSelected: %d", tag);
+    int row, col;
+    [self.board getRow:&row Column:&col ForTile:tag];
+    CGRect buttonFrame = sender.frame;
+    if ([self.board canSlideTileUpAtRow:row Column:col]) {
+        
+    }
 }
 -(IBAction)scrambleTiles:(id)sender{
     
