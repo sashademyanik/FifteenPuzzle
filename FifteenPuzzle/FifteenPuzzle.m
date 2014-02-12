@@ -40,7 +40,7 @@
     return NO;
 }
 -(BOOL)canSlideTileUpAtRow:(int)row Column:(int)col{
-    if(col > 0 && state[row][col - 1] == 0){
+    if(row != 0 && state[row-1][col ] == 0){
         return YES;
     }else{
         return NO;
@@ -48,21 +48,21 @@
     
 }
 -(BOOL)canSlideTileDownAtRow:(int)row Column:(int)col{
-    if(col < 3 && state[row][col + 1] == 0){
+    if(row != 3 && state[row+1][col] == 0){
         return YES;
     }else{
         return NO;
     }
 }
 -(BOOL)canSlideTileLeftAtRow:(int)row Column:(int)col{
-    if(row > 0 && state[row - 1][col] == 0){
+    if(col != 0 && state[row][col- 1] == 0){
         return YES;
     }else{
         return NO;
     }
 }
 -(BOOL)canSlideTileRightAtRow:(int)row Column:(int)col{
-    if(row < 3 && state[row + 1][col] == 0){
+    if(col != 3 && state[row][col + 1] == 0){
         return YES;
     }else{
         return NO;
@@ -84,12 +84,12 @@
     }else if (state[row - 1][col] == 0){
         int temp = state[row][col];
         state[row][col] = state[row - 1][col];
-        state[row - 1][col-1] = temp;
+        state[row - 1][col] = temp;
         
     } else{
         int temp = state[row][col];
         state[row][col] = state[row + 1][col];
-        state[row + 1][col-1] = temp;
+        state[row + 1][col] = temp;
     }
 }
 

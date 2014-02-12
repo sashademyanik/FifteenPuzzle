@@ -39,6 +39,9 @@
                                                 <state key="normal" title="1" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tbY-bm-6LQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="SG7-D4-Dfe">
                                                 <rect key="frame" x="75" y="0.0" width="75" height="75"/>
@@ -48,6 +51,9 @@
                                                 <state key="normal" title="2" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="lR1-7z-eFc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xts-ar-kPW">
                                                 <rect key="frame" x="150" y="0.0" width="75" height="75"/>
@@ -69,6 +75,9 @@
                                                 <state key="normal" title="4" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hec-Tn-kRP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uXT-hU-nbz">
                                                 <rect key="frame" x="0.0" y="75" width="75" height="75"/>
@@ -78,6 +87,9 @@
                                                 <state key="normal" title="5" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="hVR-xU-CFW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eMC-Vk-K0t">
                                                 <rect key="frame" x="0.0" y="150" width="75" height="75"/>
@@ -87,6 +99,9 @@
                                                 <state key="normal" title="9" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Sdp-Ma-uT3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kKo-AZ-frv">
                                                 <rect key="frame" x="75" y="75" width="75" height="75"/>
@@ -96,6 +111,9 @@
                                                 <state key="normal" title="6" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6aH-Rp-Hfc"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zZ7-Nn-Mf8">
                                                 <rect key="frame" x="150" y="75" width="75" height="75"/>
@@ -105,6 +123,9 @@
                                                 <state key="normal" title="7" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="YnW-jM-B9K"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CMg-pP-k0L">
                                                 <rect key="frame" x="225" y="75" width="75" height="75"/>
@@ -114,6 +135,9 @@
                                                 <state key="normal" title="8" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3So-Le-jGg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g4c-ku-9Gl">
                                                 <rect key="frame" x="75" y="150" width="75" height="75"/>
@@ -123,6 +147,9 @@
                                                 <state key="normal" title="10" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NnG-DM-VYZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AUv-YD-x77">
                                                 <rect key="frame" x="150" y="150" width="75" height="75"/>
@@ -132,6 +159,9 @@
                                                 <state key="normal" title="11" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="yab-jn-uHA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wgp-5L-IDg">
                                                 <rect key="frame" x="225" y="150" width="75" height="75"/>
@@ -141,6 +171,9 @@
                                                 <state key="normal" title="12" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="iv0-5g-r2g"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xST-p4-WZT">
                                                 <rect key="frame" x="0.0" y="225" width="75" height="75"/>
@@ -150,6 +183,9 @@
                                                 <state key="normal" title="13" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aU5-jV-1m1"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eiN-hF-Cjv">
                                                 <rect key="frame" x="75" y="225" width="75" height="75"/>
@@ -159,6 +195,9 @@
                                                 <state key="normal" title="14" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="MzF-Kg-TBL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dL1-8q-KBB">
                                                 <rect key="frame" x="150" y="225" width="75" height="75"/>
@@ -168,6 +207,9 @@
                                                 <state key="normal" title="15" backgroundImage="Button">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="tileSelected:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="XIL-aH-UlQ"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.050084717643457809" green="0.80753226902173914" blue="0.04314442897421239" alpha="1" colorSpace="calibratedRGB"/>

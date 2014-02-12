@@ -40,6 +40,12 @@
         buttonFrame.origin.y = (row - 1) * buttonFrame.size.height;
         sender.frame = buttonFrame;
         [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
+    }else if([self.board canSlideTileDownAtRow:row Column:col]){
+        
+    }else if([self.board canSlideTileLeftAtRow:row Column:col]){
+        
+    }else if([self.board canSlideTileRightAtRow:row Column:col]){
+        
     }
 }
 -(IBAction)scrambleTiles:(id)sender{
