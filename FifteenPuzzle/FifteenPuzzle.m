@@ -75,12 +75,21 @@
         int temp = state[row][col];
         state[row][col] = state[row][col - 1];
         state[row][col-1] = temp;
+        
     }else if ( state[row][col + 1] == 0){
+        int temp = state[row][col];
+        state[row][col] = state[row][col + 1];
+        state[row][col + 1] = temp;
         
     }else if (state[row - 1][col] == 0){
+        int temp = state[row][col];
+        state[row][col] = state[row - 1][col];
+        state[row - 1][col-1] = temp;
         
     } else{
-        
+        int temp = state[row][col];
+        state[row][col] = state[row + 1][col];
+        state[row + 1][col-1] = temp;
     }
 }
 

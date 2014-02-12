@@ -36,7 +36,10 @@
     [self.board getRow:&row Column:&col ForTile:tag];
     CGRect buttonFrame = sender.frame;
     if ([self.board canSlideTileUpAtRow:row Column:col]) {
-        
+        [self.board slideTileAtRow:row Column:col];
+        buttonFrame.origin.y = (row - 1) * buttonFrame.size.height;
+        sender.frame = buttonFrame;
+        [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
     }
 }
 -(IBAction)scrambleTiles:(id)sender{
