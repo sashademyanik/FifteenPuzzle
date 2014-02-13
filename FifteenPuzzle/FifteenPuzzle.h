@@ -12,7 +12,7 @@
 
 -(id)init;
 -(void)scramble:(int)n;
--(int)getTileAtRow:(int*)row Column:(int*)col;
+-(int)getTileAtRow:(int)row Column:(int)col;
 -(void)getRow:(int*)row Column:(int*)col ForTile:(int)tile; 
 -(BOOL)isSolved;
 -(BOOL)canSlideTileUpAtRow:(int)row Column:(int)col;

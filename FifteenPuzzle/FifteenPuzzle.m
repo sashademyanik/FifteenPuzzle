@@ -27,10 +27,11 @@
 
 }
 -(void)scramble:(int)n{
+    NSInteger nVal = 1;
     
 }
--(int)getTileAtRow:(int*)row Column:(int*)col{
-    return state[*row][*col];
+-(int)getTileAtRow:(int)row Column:(int)col{
+    return state[row][col];
 }
 -(void)getRow:(int*)row Column:(int*)col ForTile:(int)tile{
     
