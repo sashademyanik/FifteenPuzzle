@@ -20,7 +20,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.board = [[FifteenPuzzle alloc] init];
     //[self.board scramble: NUM_SHUFFLES];
-    //[self arrangeBoardView];
+    [self arrangeBoardView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,7 +31,7 @@
 
 -(IBAction)tileSelected:(UIButton*)sender{
     const int tag = [sender tag];
-    NSLog(@"tileSelected: %d", tag);/*
+    NSLog(@"tileSelected: %d", tag);
     int row, col;
     [self.board getRow:&row Column:&col ForTile:tag];
     CGRect buttonFrame = sender.frame;
@@ -40,30 +40,27 @@
         buttonFrame.origin.y = (row - 1) * buttonFrame.size.height;
         sender.frame = buttonFrame;
         [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
+        
     }else if([self.board canSlideTileDownAtRow:row Column:col]){
-        if ([self.board canSlideTileDownAtRow:row Column:col]) {
-            [self.board slideTileAtRow:row Column:col];
-            buttonFrame.origin.y = (row + 1) * buttonFrame.size.height;
-            sender.frame = buttonFrame;
-            [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
-        }
+        [self.board slideTileAtRow:row Column:col];
+        buttonFrame.origin.y = (row + 1) * buttonFrame.size.height;
+        sender.frame = buttonFrame;
+        [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
         
     }else if([self.board canSlideTileLeftAtRow:row Column:col]){
-        if ([self.board canSlideTileLeftAtRow:row Column:col]) {
-            [self.board slideTileAtRow:row Column:col];
-            buttonFrame.origin.x = (col - 1) * buttonFrame.size.width;
-            sender.frame = buttonFrame;
-            [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
-        }
+        [self.board slideTileAtRow:row Column:col];
+        buttonFrame.origin.x = (col - 1) * buttonFrame.size.width;
+        sender.frame = buttonFrame;
+        [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
+
         
     }else if([self.board canSlideTileRightAtRow:row Column:col]){
-        if ([self.board canSlideTileRightAtRow:row Column:col]) {
-            [self.board slideTileAtRow:row Column:col];
-            buttonFrame.origin.x = (col + 1) * buttonFrame.size.width;
-            sender.frame = buttonFrame;
-            [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
-        }
-    }*/
+        [self.board slideTileAtRow:row Column:col];
+        buttonFrame.origin.x = (col + 1) * buttonFrame.size.width;
+        sender.frame = buttonFrame;
+        [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
+    }
+    [self arrangeBoardView];
 }
 
 -(void)arrangeBoardView {
