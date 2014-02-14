@@ -10,6 +10,7 @@
 #import "FifteenPuzzle.h"
 
 @interface PuzzleViewController : UIViewController
+@property(nonatomic) BOOL lock;
 @property(strong, nonatomic) FifteenPuzzle *board;
 @property (weak, nonatomic) IBOutlet UIView *boardView;
 -(IBAction)tileSelected:(UIButton*)sender;

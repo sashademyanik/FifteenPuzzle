@@ -14,12 +14,15 @@
 
 @implementation PuzzleViewController
 
+int NUM_SHUFFLES = 150;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.board = [[FifteenPuzzle alloc] init];
-    //[self.board scramble: NUM_SHUFFLES];
+    [self.board scramble: NUM_SHUFFLES];
+    self.lock = NO;
     [self arrangeBoardView];
 }
 
@@ -31,7 +34,8 @@
 
 -(IBAction)tileSelected:(UIButton*)sender{
     const int tag = [sender tag];
-    NSLog(@"tileSelected: %d", tag);
+    if (!self.lock) {
+    
     int row, col;
     [self.board getRow:&row Column:&col ForTile:tag];
     CGRect buttonFrame = sender.frame;
@@ -60,7 +64,11 @@
         sender.frame = buttonFrame;
         [UIView animateWithDuration: 0.5 animations:^{sender.frame = buttonFrame;}];
     }
+    }
     [self arrangeBoardView];
+    if([self.board isSolved]){
+        self.lock = YES;
+    }
 }
 
 -(void)arrangeBoardView {
@@ -80,7 +88,6 @@
 }
 
 -(IBAction)scrambleTiles:(id)sender{
-    int NUM_SHUFFLES = 150;
     [self.board scramble:NUM_SHUFFLES];
     [self arrangeBoardView];
 }

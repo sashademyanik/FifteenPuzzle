@@ -27,17 +27,64 @@
 
 }
 -(void)scramble:(int)n{
-    NSInteger nVal = 1;
+    int i, j;
+    while (n > 0) {
+        BOOL check = NO;
+        i = rand()%4;
+        j = rand()%4;
+        
+        if ([self canSlideTileUpAtRow:i Column:j] || [self canSlideTileDownAtRow:i Column:j] ||
+            [self canSlideTileLeftAtRow:i Column:j] || [self canSlideTileRightAtRow:i Column:j]) {
+            check = YES;
+        }
+        if(check){
+            [self slideTileAtRow:i Column:j];
+            n--;
+        }
+        
+    }
     
 }
 -(int)getTileAtRow:(int)row Column:(int)col{
     return state[row][col];
 }
 -(void)getRow:(int*)row Column:(int*)col ForTile:(int)tile{
-    
+    for (int i = 0; i < 4; i ++) {
+        for (int j = 0; j < 4; j++) {
+            if (state[i][j] == tile) {
+                *row = i;
+                *col = j;
+            }
+        }
+    }
 }
 -(BOOL)isSolved{
+    BOOL check = YES;
+    int test[4][4];
+    int inc = 1;
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            if(i == 3 && j == 3){
+                test[i][j] = 0;
+            }
+            else{
+                test[i][j] = inc;
+                inc++;
+            }
+        }
+    }
     
+    for(int i = 0; i < 4; i++){
+        for(int j = 0; j < 4; j++){
+            if(state[i][j] != test[i][j]){
+                check = NO;
+            }
+        }
+    }
+    
+    if(check){
+        return YES;
+    }
     return NO;
 }
 -(BOOL)canSlideTileUpAtRow:(int)row Column:(int)col{
@@ -72,28 +119,31 @@
 }
 
 -(void)slideTileAtRow:(int)row Column:(int)col {
-    NSLog(@"%d", state[row][col]);
-    if( state[row][col - 1] == 0){
-        int temp = state[row][col];
-        state[row][col] = state[row][col - 1];
-        state[row][col-1] = temp;
-        
-    }else if ( state[row][col + 1] == 0){
-        int temp = state[row][col];
-        state[row][col] = state[row][col + 1];
-        state[row][col + 1] = temp;
-        
-    }else if (state[row - 1][col] == 0){
-        int temp = state[row][col];
-        state[row][col] = state[row - 1][col];
-        state[row - 1][col] = temp;
-        
-    } else if (state[row+1][col]){
-        int temp = state[row][col];
-        state[row][col] = state[row + 1][col];
-        state[row + 1][col] = temp;
+    int temp1, temp2;
+    if([self canSlideTileDownAtRow:row Column:col]){
+        temp1 = state[row][col];
+        temp2 = state[row+1][col];
+        state[row][col] = temp2;
+        state[row+1][col] = temp1;
     }
-    NSLog(@"%d", state[row][col]);
+    else if([self canSlideTileUpAtRow:row Column:col]){
+        temp1 = state[row][col];
+        temp2 = state[row-1][col];
+        state[row][col] = temp2;
+        state[row-1][col] = temp1;
+    }
+    else if([self canSlideTileLeftAtRow:row Column:col]){
+        temp1 = state[row][col];
+        temp2 = state[row][col-1];
+        state[row][col] = temp2;
+        state[row][col-1] = temp1;
+    }
+    else if([self canSlideTileRightAtRow:row Column:col]){
+        temp1 = state[row][col];
+        temp2 = state[row][col+1];
+        state[row][col] = temp2;
+        state[row][col+1] = temp1;
+    }
 }
 
 @end
